@@ -1,0 +1,16 @@
+<div class="login-box">
+	<h4>For a better user experience sign in to Aegean Guides so you can fully plan and customize your next journey!</h4>
+	<button (click)="loginFb()" class="social-button" id="facebook-connect"> <span>Continue with Facebook</span></button>
+	<button (click)="loginGoogle()" class="social-button" id="google-connect"> <span>Continue with Google</span></button>
+	<button routerLink="/email-login" class="social-button" id="twitter-connect"> <span>Sign in with email</span></button>
+	<div class="has-padding-5">
+		<a routerLink="/register" routerLinkActive="active" class="alc">No account? <strong>Create one here</strong></a>
+	</div>
+
+  <div class="is-small has-margin-5">
+      <p>
+        To use Aegean Guides you must have cookies enabled. <br>
+        Also, we’ll never post to Facebook or Google without your permission. For more info, please see Login FAQ.
+      </p>
+    </div>
+</div>

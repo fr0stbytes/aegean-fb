@@ -1,0 +1,51 @@
+<div class="has-margin-1">
+  <h1 class="title is-2">Restaurants</h1>
+  <h5 class="subtitle is-5">30 listings found</h5>
+</div>
+<div class="has-margin-5">
+  <div class="columns is-desktop has-margin-top">
+    <div class="column is-one-quarter">
+      <div class="columns">
+        <div class="column">
+          <p class="title is-5">Filter by</p>
+        </div>
+        <div class="column ">
+          <a class="button is-white is-small">Clear all</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="column">
+      <div class="has-border" *ngFor="let restaurant of restaurants">
+        <div class="columns is-desktop">
+          <div class="column is-one-third">
+            <figure class="image is-4by3">
+              <img src="{{restaurant.picture}}">
+            </figure>
+          </div>
+          <div class="column">
+            <div class="columns">
+              <div class="column is-two-thirds">
+                <p class="title is-3">{{restaurant.company}}</p>
+                <p class="subtitle is-6">{{restaurant.address}}</p>
+                <p>{{restaurant.short_description}}</p>
+                <div class="has-margin-small">
+                  <p><img src="../../assets/img/dish-icon-tall.png" alt=""> {{restaurant.cuisine}}</p>
+                </div>
+              </div>
+              <div class="column">
+              </div>
+              <div class="column has-text-right">
+                <p><span style="color: #3386ff; margin-right:5px;"><i class="fa fa-2x fa-heart-o"></i></span>{{restaurant.appreciations}}</p>
+              </div>
+            </div>
+            <div class="column has-text-right">
+              <a class="button is-dark is-outlined">Add to journey</a>
+              <a [routerLink]="['/restaurant/' +restaurant.$key]" class="button is-primary">View details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
